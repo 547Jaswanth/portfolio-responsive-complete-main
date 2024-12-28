@@ -306,6 +306,10 @@ img {
   border-radius: 0.5rem;
 
 }
+.skills_springBoot
+{
+  width: 50%;
+}
 
 /* ===== WORK =====*/
 .work__container {
