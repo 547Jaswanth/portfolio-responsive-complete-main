@@ -291,10 +291,13 @@ img {
   z-index: var(--z-back);
 }
 .skills__html {
-  width: 95%;
+  width: 75%;
+}
+.skills__j2ee {
+  width: 65%;
 }
 .skills__css {
-  width: 85%;
+  width: 65%;
 }
 .skills__js {
   width: 65%;
@@ -308,7 +311,7 @@ img {
 }
 .skills_springBoot
 {
-  width: 50%;
+  width: 40%;
 }
 
 /* ===== WORK =====*/
