@@ -259,6 +259,65 @@ img{
         }
     }
 }
+/* ===== WORK EXPERIENCE ===== */
+.experience {
+    &__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      row-gap: 2rem;
+    }
+  
+    &__role {
+      font-size: var(--h2-font-size);
+      font-weight: var(--font-bold);
+      color: var(--title-color);
+      margin-bottom: 0.5rem;
+    }
+  
+    &__company,
+    &__duration {
+      font-size: var(--small-font-size);
+      color: var(--text-color-light);
+      margin-bottom: 0.3rem;
+    }
+  
+    &__project-title {
+      font-size: var(--normal-font-size);
+      font-weight: var(--font-semi);
+      color: var(--text-color);
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__details {
+      list-style: none;
+      padding-left: 0;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 700px;
+  
+      li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 1.5rem;
+  
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: var(--second-color);
+          font-size: 1.2rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  
 
 /* ===== SKILLS =====*/
 .skills{
@@ -420,6 +479,11 @@ img{
         align-items: center;
         text-align: initial;
     }
+    .experience{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        text-align: initial;
+    }
 
     .skills__container{
         grid-template-columns: .7fr;
@@ -486,6 +550,11 @@ img{
             width: 400px;
             bottom: 10%;
         }
+    }
+    .experience
+    {
+        padding: 8rem 0 2rem;
+
     }
 
     .about{

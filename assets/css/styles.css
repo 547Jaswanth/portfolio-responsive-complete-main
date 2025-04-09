@@ -249,6 +249,62 @@ img {
   width: 200px;
   border-radius: 0.5rem;
 }
+/* ===== WORK EXPERIENCE ===== */
+.experience__container {
+  max-width: 800px;
+  margin: 0 auto; /* centers the container */
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9; /* optional light background */
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.experience__role {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.experience__company,
+.experience__duration {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 0.3rem;
+}
+
+.experience__project-title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  color: var(--text-color);
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.experience__details {
+  list-style: none;
+  padding-left: 0;
+  text-align: left; /* list items aligned left inside center container */
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.experience__details li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.experience__details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--second-color);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 
 /* ===== SKILLS =====*/
 .skills__container {
@@ -290,6 +346,10 @@ img {
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
+.skills__corejava
+{
+  width: 85%;
+}
 .skills__html {
   width: 75%;
 }
@@ -311,7 +371,11 @@ img {
 }
 .skills_springBoot
 {
-  width: 40%;
+  width: 50%;
+}
+.skills_junit
+{
+width: 50%;
 }
 
 /* ===== WORK =====*/
