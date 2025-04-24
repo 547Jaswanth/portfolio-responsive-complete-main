@@ -255,7 +255,7 @@ img {
   margin: 0 auto; /* centers the container */
   text-align: center;
   padding: 2rem;
-  background-color: #f9f9f9; /* optional light background */
+  background-color: #f3f3f3; /* optional light background */
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
