@@ -84,3 +84,5 @@ themeToggleButton.addEventListener('click', () => {
         localStorage.removeItem('theme');  // Remove the theme from localStorage to reset
     }
 });
+sr.reveal('.experience__card', { interval: 200 });
+
