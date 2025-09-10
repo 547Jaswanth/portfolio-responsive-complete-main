@@ -217,7 +217,7 @@ img {
   fill: var(--first-color);
 }
 .home__blob-img {
-  width: 360px;
+  width: 479px;
 }
 
 /*BUTTONS*/
@@ -250,18 +250,23 @@ img {
   border-radius: 0.5rem;
 }
 /* ===== WORK EXPERIENCE ===== */
-.experience__card,.experience__card2 {
+.experience__card {
     border-radius: 1rem;
     padding: 1.5rem;
     margin-bottom: 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Light Mode Default */
-.experience__card,experience__card2 {
-    background-color: #fff;
+      background-color: #f8f8f88f;
     color: #000;
 }
+.experience__card2{
+   border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #f8f8f88f;
+    color: #000;
+}
+
 
 .experience__client,experience__client2 {
     font-weight: normal;
@@ -276,8 +281,13 @@ img {
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
-    .experience__card, .experience__card2{
+    .experience__card{
         background-color: #0606063f;
+        color: #fff;
+    }
+    .experience__card2
+    {
+       background-color: #0606063f;
         color: #fff;
     }
 
@@ -306,30 +316,31 @@ img {
 }
 .experience__card {
     background-color: #fff;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPiXs0yQYc6Dyb4BUYNfoqadXuTjFHIVCEA&s");
-    background-repeat: no-repeat;
-    background-position-x:right;
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPiXs0yQYc6Dyb4BUYNfoqadXuTjFHIVCEA&s"); */
+    /* background-repeat: no-repeat; */
+    /* background-position-x:right; */
     color: #000;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .experience__card2{
    background-color: #fff;
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPiXs0yQYc6Dyb4BUYNfoqadXuTjFHIVCEA&s"); */
-    background-repeat: no-repeat;
-    background-position-x:right;
     color: #000;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
 }
 
-body.dark-mode .experience__card {
+body.dark-mode .experience__card  {
     background-color: #1e1e1e;
     color: #f5f5f5;
     box-shadow: 0 4px 8px rgba(255,255,255,0.05);
 }
-
+body.dark-mode .experience__card2 {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
 
 
 /* ===== SKILLS =====*/

@@ -86,3 +86,5 @@ themeToggleButton.addEventListener('click', () => {
 });
 sr.reveal('.experience__card', { interval: 200 });
 
+sr.reveal('.experience__card2', { interval: 10 });
+
