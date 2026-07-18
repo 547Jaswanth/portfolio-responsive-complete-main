@@ -21,57 +21,50 @@
         <!--===== HEADER =====-->
         <header class="l-header" id ="header">
             <nav class="nav bd-grid" id="navbar">
-                <div>
-                    <a href="#" class="nav__logo">K Jaswanth</a>
-                </div>
+                <a href="#" class="nav__logo">K Jaswanth</a>
 
+                <div class="nav__right">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
 
-                <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
-                
-                
-               
-                
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                            <li class="nav__item"><a href="#training" class="nav__link">Training</a></li>
+                            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                            <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        </ul>
+                    </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                        <i class='bx bx-menu'></i>
+                    </button>
                 </div>
             </nav>
         </header>
-
         <main class="l-main">
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Jaswanth</span><br> Java Developer</h1>
-
-                    <a href="#contact" class="button">Contact</a>
+                    <p class="home__subtitle">Backend-focused Java developer building scalable microservices and APIs. Open to opportunities.</p>
+                    <div class="home__actions">
+                        <a href="#contact" class="button">Contact</a>
+                        <a href="https://drive.google.com/file/d/1vRWsru4B2GDTB1cRHs6nylxD-d3sckqK/view?usp=sharing" class="button button--ghost" target="_blank" rel="noopener">View Resume</a>
+                    </div>
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/k-jaswanth-227b94256/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/547Jaswanth" class="home__social-icon"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:jaswanth.keeramanda@gmail.com?subject=Contact%20Form%20Submission&body=Hello%20there!" class="contact__email home__social-icon">
-                        <i class='bx bx-mail-send' style="font-size: 24px;"></i> <!-- Mail icon -->
-                    </a>
-                    <a href="tel:+919182791342" class="contact__phone home__social-icon">
-                        <i class='bx bx-phone' style="font-size: 24px;"></i> <!-- Phone icon -->
-                    </a>
-
-                    <a href="https://drive.google.com/file/d/1TsyMPPlLnJCQpwOltbfL2jKKJFs_bvYA/view?usp=sharing" class="home__social-icon" target="_blank">
-                        <i class="fa-solid fa-file-arrow-down"></i><!-- Download resume -->
-                    </a>
+                    <a href="https://www.linkedin.com/in/k-jaswanth-227b94256/" class="home__social-icon social-linkedin" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/547Jaswanth" class="home__social-icon social-github" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:jaswanth.keeramanda@gmail.com" class="contact__email home__social-icon social-mail" aria-label="Email">
+                                            <i class='bx bx-mail-send' style="font-size: 20px;"></i>
+                                        </a>
+                                        <a href="tel:+919182791342" class="contact__phone home__social-icon social-phone" aria-label="Phone">
+                                            <i class='bx bx-phone' style="font-size: 20px;"></i>
+                                        </a>
                     
                 </div>
 
@@ -82,7 +75,7 @@
                         </mask>
                         <g mask="url(#mask0)">
                             <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" href="assets/img/jaswanth_profile2.png"/>
+                            <image class="home__blob-img" href="assets/img/jaswanth_profile1.png"/>
                         </g>
                     </svg>
                 </div>
@@ -94,17 +87,19 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/jaswanth_profile.png" alt="">
+                        <img src="assets/img/Jaswanth8262.png" alt="">
                     </div>
             
                     <div>
                         <h2 class="about__subtitle">I'am Jaswanth</h2>
-                        <p class="about__text">Motivated and detail-oriented Java Developer with a strong focus on backend
-development and building scalable, high-performance applications. Experienced in
-developing RESTful services, following best practices in clean code, and applying testdriven development in Agile environments. Known for effectively collaborating with
-cross-functional teams to solve complex technical problems and contribute to impactful
-software solutions. Committed to continuous learning and delivering robust, maintainable
-systems that align with business goals</p>           
+                        <p class="about__text">Java Developer with over 2 years of professional and training experience building scalable, fault-tolerant
+                                                microservices and backend systems using Java 8+ and Spring Boot. Delivered 100+ production REST APIs,
+                                                reduced API response times by 30% through SQL optimization, and grew automated test coverage from 4%
+                                                to 45%. Skilled in cross-functional collaboration, SIT/UAT, and SDLC processes, with a consulting mindset
+                                                and stakeholder management ability suited to digital transformation initiatives in a client-facing
+                                                environment.
+
+                        </p>
                     </div>                                   
                 </div>
             </section>
@@ -113,210 +108,303 @@ systems that align with business goals</p>
     <h2 class="section-title">Work Experience</h2>
 
     <div class="experience__container bd-grid">
-        <div class="experience__card">
-            <div class="experience__card-content" >
 
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPiXs0yQYc6Dyb4BUYNfoqadXuTjFHIVCEA&s" 
-                     alt="Jspiders Logo" 
-                     style="position: absolute; top: 10px; right: 10px; width:170px; height: 60px; border-radius: 8px;">
-              
-                
-                <h3 class="experience__role">Associate Software Engineer</h3>
-                <p class="experience__company">NeoSOFT, Bangalore, India</p>
-                <p class="experience__duration">Jan 2025 – July 2025</p>
+    <!-- Experience 1 -->
+    <div class="experience__card">
+        <div class="experience__card-content">
 
-               <ul class="experience__details">
-                   <li>Developed and maintained enterprise-level <b>client onboarding software</b> for Xpressbees using <b>Java, Java 8, Hibernate, Spring Boot, and PostgreSQL</b>.</li>
-                   <li>Contributed to <b>Xpressbees Onboarding Application</b> by implementing numerous <b>RESTful APIs</b> based on client requirements.</li>
-                   <li>Wrote and executed <b></b>500+ JUnit test cases</b> using <b>JUnit and Mockito</b> to ensure application reliability and high code quality.</li>
-                   <li>Integrated message-based communication using <b>Apache Kafka</b> for scalable and asynchronous data processing.</li>
-                   <li>Managed <b>version control and collaboration</b> using <b>Git and GitHub</b>, conducted code reviews, and followed coding standards.</li>
-                   <li>Containerized applications using <b>Docker</b> for consistent deployments across development, staging, and production environments.</li>
-                   <li>Worked on <b>Book Ordering System</b> (internal project) using <b>Java, Spring Boot, Hibernate, Spring Data JPA, Saga Orchestrator design pattern, Microservices architecture, MySQL, Kafka, Git, Docker</b>.</li>
-                   <li>Implemented <b>microservices-based backend modules</b> with proper database interactions and inter-service communication using Kafka.</li>
-                   <li>Participated in <b>Agile ceremonies</b> including daily stand-ups, sprint planning, and retrospectives, contributing actively to design and implementation discussions.</li>
-                   <li>Gained practical experience in <b>unit testing, integration testing, and deployment of enterprise applications</b>, ensuring production-ready code delivery.</li></ul>
-            </div>
+            <img src="assets\img\spire.ai_logo.png"
+                 alt="Spire.ai Logo"
+                 style="position: absolute; top: 10px; right: 10px; width:170px; height:60px; border-radius:8px;">
+
+            <h3 class="experience__role">Software Engineer 1</h3>
+            <p class="experience__company">Spire Technologies & Solutions Pvt. Ltd. (Spire.ai), Bengaluru</p>
+            <p class="experience__duration">March 2026 – June 2026</p>
+            <p><b>Project:</b> iExchange (Career Management & Job Recommendation Platform)</p>
+
+            <ul class="experience__details">
+
+                    <li>
+                        Designed, developed, and maintained scalable <b>RESTful APIs</b> and
+                        <b>Java/Spring Boot microservices</b> for <b>iExchange</b>, a career
+                        management platform that transforms resumes into structured skill
+                        profiles within a distributed microservices architecture.
+                    </li>
+
+                    <li>
+                        Engineered backend logic for the <b>AI-driven job recommendation
+                        engine</b>, enabling candidate matching across
+                        <b>150,000+ skills</b>, <b>2M+ active job listings</b>, and
+                        <b>6,000+ enterprises</b> using resume parsing, skill scoring, and
+                        geolocation-based filtering.
+                    </li>
+
+                    <li>
+                        Built backend modules for <b>skill-gap analysis</b> and
+                        <b>course recommendation</b>, integrating learning platforms such as
+                        <b>Coursera, Udemy, and YouTube</b> while translating complex business
+                        requirements into scalable and reliable technical solutions.
+                    </li>
+
+                    <li>
+                        Managed <b>Jenkins CI/CD pipelines</b> across multiple environments,
+                        investigated production issues through root cause analysis using
+                        distributed logs and error traces, and collaborated with
+                        <b>Product, Frontend, and QA teams</b> in Agile sprints to ensure
+                        reliable integration, timely feature delivery, and comprehensive
+                        technical documentation.
+                    </li>
+
+                </ul>
+
         </div>
+    </div>
 
 
+    <!-- Experience 2 -->
+    <div class="experience__card">
+        <div class="experience__card-content">
 
-        <!-- Java Full Stack Development Trainee -->
-        <div class="experience__card2">
-            <div class="experience__card2-content">
-                <!-- Image at top right -->
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCYXTnrE85ATKVwpruLG2vebPSbsargxhcIKV6CfX4rqn8QYVfocXdZRHQwM2irHidyM&usqp=CAU" 
-                     alt="Jspiders Logo" 
-                     style="position: absolute; top: 10px; right: 10px; width:170px; height: 60px; border-radius: 8px;">
-                
-                <h3 class="experience__role2">Java Full Stack Development Trainee</h3>
-                <p class="experience__company2">Jspiders, Bangalore, India</p>
-                <p class="experience__duration2">Jan 2024 – Dec 2024</p>
+            <img src="assets\img\fre.png"
+                 alt="Logo"
+                 style="position: absolute; top: 10px; right: 10px; width:170px; height:120px; border-radius:8px;">
 
-                <ul class="experience__details2">
-                   <li>📌 Gained hands-on training in Java Full Stack technologies, covering Core Java, Advanced Java, JDBC, Servlets, JSP, Hibernate, Spring Boot, Spring Data JPA, and MySQL.</li>
-                    <li>📌 Developed full-stack applications integrating backend services with frontend modules using HTML, CSS, and JavaScript.</li>
-                    <li>📌 Built and consumed RESTful APIs using Spring Boot for seamless client-server communication.</li>
-                    <li>📌 Implemented role-based projects and applied database operations using Hibernate and JPA.</li>
-                    <li>📌 Managed version control and collaboration using Git and GitHub.</li>
-                    <li>📌 Applied unit testing with JUnit and Mockito to ensure application quality and reliability.</li>
-                    <li>📌 Hands-on experience with Docker for containerized deployments.</li>
-                    <li>📌 Participated in project development lifecycle including design, coding, testing, and deployment in Agile sprints.</li>
-                    <li>📌 Gained practical exposure to project work, including portfolio website, RBAC system, and client onboarding applications.</li>
- </ul>
-            </div>
+            <h3 class="experience__role">Freelance Backend Java Developer</h3>
+            <p class="experience__company">Independent Contractor</p>
+            <p class="experience__duration">August 2025 – February 2026</p>
+
+            <ul class="experience__details">
+
+                <li>Developed and enhanced <b>100+ RESTful APIs</b> using <b>Java, Spring Boot, Hibernate, JPA, and MySQL</b> for multiple client projects, implementing scalable backend solutions and business requirements.</li>
+
+                <li>Performed end-to-end validation of <b>120+ APIs</b> using <b>Postman, Swagger/OpenAPI, and manual testing</b>, verifying authentication, business logic, request/response accuracy, data validation, and integration workflows.</li>
+
+                <li>Investigated, debugged, and resolved <b>20+ backend issues</b> involving SQL queries, business logic, API integrations, and application performance through root cause analysis and code optimization.</li>
+
+                <li>Implemented centralized exception handling with standardized API responses, improved API contracts, and collaborated with frontend developers to ensure seamless system integration and enhanced user experience.</li>
+
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- Experience 3 -->
+    <div class="experience__card">
+        <div class="experience__card-content">
+
+            <img src="/assets/img/neosoft_logo.png"
+                 alt="neosoft Logo"
+                 style="position: absolute; top: 10px; right: 10px; width:170px; height:60px; border-radius:8px;">
+
+            <h3 class="experience__role">Associate Software Engineer</h3>
+            <p class="experience__company">NeoSOFT Technologies Pvt. Ltd. (Client: Xpressbees), Bengaluru</p>
+            <p class="experience__duration">January 2025 – July 2025</p>
+            <p><b>Project:</b> Onboarding Application – 3PL Logistics Platform</p>
+
+            <ul class="experience__details">
+
+                <li>Designed and implemented <b>100+ RESTful APIs</b> for Xpressbees' enterprise onboarding platform supporting <b>19,000+ pin codes</b> and <b>4,500+ service centers</b> while following secure coding standards and SDLC best practices.</li>
+
+                <li>Increased automated test coverage from <b>4% to 45%</b> by developing comprehensive <b>JUnit and Mockito</b> test suites, improving application reliability and supporting SIT/UAT activities.</li>
+
+                <li>Improved API performance by <b>30%</b> through SQL query optimization, request profiling, caching strategies, and database performance tuning for high-volume logistics operations.</li>
+
+                <li>Documented REST APIs using <b>Swagger/OpenAPI</b>, provided production support, resolved critical backend issues through root cause analysis, and collaborated with frontend and QA teams in Agile development.</li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+
+    </div>
+</section>
+<section class="training section" id="training">
+
+    <h2 class="section-title">Training & Certifications</h2>
+
+    <div class="training__container bd-grid">
+
+        <div class="training__card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCYXTnrE85ATKVwpruLG2vebPSbsargxhcIKV6CfX4rqn8QYVfocXdZRHQwM2irHidyM&usqp=CAU"
+                 alt="JSpiders Logo"
+                 style="position:absolute;top:10px;right:10px;width:170px;height:60px;border-radius:8px;">
+
+            <h3 class="training__role">
+                Java Full Stack Development Training
+            </h3>
+
+            <p class="training__company">
+                JSpiders, Bengaluru
+            </p>
+
+            <p class="training__duration">
+                January 2024 – December 2024
+            </p>
+
+            <ul class="training__details">
+
+                <li>
+                    Completed intensive training in <b>Java, Java 8, JDBC, Servlets, JSP, Hibernate, Spring Boot, Spring Data JPA, MySQL, HTML, CSS, JavaScript, Git, Maven, and REST APIs</b>, building a strong foundation in full-stack development.
+                </li>
+
+                <li>
+                    Designed and developed multiple backend applications, implementing <b>RESTful APIs</b>, authentication, CRUD operations, database integration, and layered architecture using Spring Boot and Hibernate.
+                </li>
+
+                <li>
+                    Built real-world projects including an <b>RBAC System</b>, <b>Employee Management System</b>, and portfolio applications while applying Agile development, Git version control, Docker, JUnit, and Mockito.
+                </li>
+
+                <li>
+                    Gained hands-on experience in software development lifecycle (SDLC), debugging, API testing, unit testing, deployment, and writing clean, maintainable, production-ready Java applications.
+                </li>
+
+            </ul>
+
         </div>
 
     </div>
+
 </section>
 
 
 
+    <!--==================== TECHNICAL SKILLS ====================-->
+<section class="skills section" id="skills">
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Jaswanth is a passionate developer known for building efficient solutions, tackling challenges, and delivering high-quality projects on time.</p>
-                       
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='fab fa-java skills__icon' style="margin-left: 5px;"></i>
+    <div class="techskills__container bd-grid">
 
-                                <span class="skills__name">Core Java</span>
-                            </div>
-                            <div class="skills__bar skills__corejava">
+        <div class="skills-grid">
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-                
-                               <img src="assets/img/J2EE.png" alt="#" class="J2EE" width="30px" style="margin-left: 0px;">
-
-                                <span class="skills__name" style="margin-left: 21px;">J2EE</span>
-                            </div>
-                            <div class="skills__bar skills__j2ee">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">75%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-
-                                <img src="assets/img/MySQL.png" alt="#" width="40px" id="MySQL" style="margin-left: -5px;">
-                                <span class="skills__name" style="margin-left: 8px;">MySQL</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-
-                                <img src="assets/img/springBoot.png" alt="#" width="30px" id="springBoot" style="margin-left: -5px;">
-                                <span class="skills__name" style="margin-left: 8px;">SpringBoot</span>
-                            </div>
-                            <div class="skills__bar skills_springBoot">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">50%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-
-                                <img src="assets/img/junit+mockito.png" alt="#" width="30px" id="springBoot" style="margin-left: -5px;">
-                                <span class="skills__name" style="margin-left: 8px;">JUnit & Mockito</span>
-                            </div>
-                            <div class="skills__bar skills_junit">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">50%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img" style="height: 600px; margin-top: 120px;">
-                    </div>
+            <div class="skill-category cat-core">
+                <div class="cat-header"><i class="fab fa-java"></i><h4>Core Java</h4></div>
+                <div class="skill-badges">
+                    <span class="badge"><i class="fab fa-java"></i> Java</span>
+                    <span class="badge">Java 8</span>
+                    <span class="badge">Java 17</span>
+                    <span class="badge">OOP</span>
+                    <span class="badge">Collections Framework</span>
+                    <span class="badge">Data Structures</span>
+                    <span class="badge">Algorithms</span>
                 </div>
-            </section>
+            </div>
+
+            <div class="skill-category cat-backend">
+                <div class="cat-header"><i class="fas fa-cogs"></i><h4>Backend & Frameworks</h4></div>
+                <div class="skill-badges">
+                    <span class="badge">Spring Boot</span>
+                    <span class="badge">Microservices</span>
+                    <span class="badge">Hibernate</span>
+                    <span class="badge">JPA</span>
+                    <span class="badge">JSP</span>
+                    <span class="badge">REST APIs</span>
+                </div>
+            </div>
+
+            <div class="skill-category cat-db">
+                <div class="cat-header"><i class="fas fa-database"></i><h4>Databases</h4></div>
+                <div class="skill-badges">
+                    <span class="badge">MySQL</span>
+                    <span class="badge">NoSQL</span>
+                    <span class="badge">MongoDB</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">SQL Optimization</span>
+                    <span class="badge">Database Design</span>
+                    <span class="badge">Query Tuning</span>
+                </div>
+            </div>
+
+            <div class="skill-category cat-cloud">
+                <div class="cat-header"><i class="fab fa-aws"></i><h4>Cloud & DevOps</h4></div>
+                <div class="skill-badges">
+                    <span class="badge">AWS</span>
+                    <span class="badge">Docker</span>
+                    <span class="badge">Kubernetes</span>
+                    <span class="badge">Jenkins</span>
+                    <span class="badge">Git</span>
+                    <span class="badge">GitHub</span>
+                    <span class="badge">GitLab</span>
+                </div>
+            </div>
+
+            <div class="skill-category cat-testing">
+                <div class="cat-header"><i class="fas fa-vial"></i><h4>Testing & API Tools</h4></div>
+                <div class="skill-badges">
+                    <span class="badge">JUnit</span>
+                    <span class="badge">Mockito</span>
+                    <span class="badge">TDD</span>
+                    <span class="badge">API Testing</span>
+                    <span class="badge">Swagger</span>
+                    <span class="badge">Postman</span>
+                </div>
+            </div>
+
+            <div class="skill-category cat-ai">
+                <div class="cat-header"><i class="fas fa-robot"></i><h4>AI-Assisted Development</h4></div>
+                <div class="skill-badges">
+                    <span class="badge">GitHub Copilot</span>
+                    <span class="badge">ChatGPT</span>
+                    <span class="badge">Claude AI</span>
+                    <span class="badge">Google AI Studio</span>
+                    <span class="badge">Cursor</span>
+                    <span class="badge">AI Tools</span>
+                </div>
+            </div>
+
+            <div class="skill-category cat-professional">
+                <div class="cat-header"><i class="fas fa-briefcase"></i><h4>Professional Skills</h4></div>
+                <div class="skill-badges">
+                    <span class="badge">Agile/Scrum</span>
+                    <span class="badge">SDLC</span>
+                    <span class="badge">Production Support</span>
+                    <span class="badge">Root Cause Analysis</span>
+                    <span class="badge">Cross-Functional Collaboration</span>
+                    <span class="badge">Stakeholder Management</span>
+                    <span class="badge">Technical Documentation</span>
+                    <span class="badge">Consulting Mindset</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
             <!--===== WORK=====-->
             <section class="work section" id="work">
                 <h2 class="section-title">Work</h2>
 
                 <div class="work__container bd-grid">
-                    <a href="https://jaswanth-typing-speed-checker.netlify.app/" class="work__img">
-                        <img src="assets/img/tsc.png" alt="">
+                    <a href="https://jaswanth-typing-speed-checker.netlify.app/" class="work__img" target="_blank" rel="noopener">
+                        <img src="assets/img/tsc.png" alt="Typing Speed Checker">
+                        <span class="work__caption">Typing Speed Checker</span>
                     </a>
-                    <a href="https://jaswanth-stop-watch.netlify.app/" class="work__img">
-                        <img src="assets/img/stw.png" alt="">
+                    <a href="https://jaswanth-stop-watch.netlify.app/" class="work__img" target="_blank" rel="noopener">
+                        <img src="assets/img/stw.png" alt="Stop Watch">
+                        <span class="work__caption">Stop Watch</span>
                     </a>
-                    <a href="https://jaswanth-zomatomodel-app.netlify.app/" class="work__img">
-                        <img src="assets/img/zmtm.png" alt="">
+                    <a href="https://jaswanth-zomatomodel-app.netlify.app/" class="work__img" target="_blank" rel="noopener">
+                        <img src="assets/img/zmtm.png" alt="Zomato Model">
+                        <span class="work__caption">Zomato Model</span>
                     </a>
-                    <a href="https://jaswanth-likes-and-dislikes-webapp.netlify.app/" class="work__img">
-                        <img src="assets/img/lad.png" alt="">
+                    <a href="https://jaswanth-likes-and-dislikes-webapp.netlify.app/" class="work__img" target="_blank" rel="noopener">
+                        <img src="assets/img/lad.png" alt="Likes & Dislikes">
+                        <span class="work__caption">Likes & Dislikes</span>
                     </a>
-                    <a href="https://jaswanth-job-application.netlify.app/" class="work__img">
-                        <img src="assets/img/onja.png" alt="">
+                    <a href="https://jaswanth-job-application.netlify.app/" class="work__img" target="_blank" rel="noopener">
+                        <img src="assets/img/onja.png" alt="Job Application">
+                        <span class="work__caption">Job Application</span>
                     </a>
-                    <a href="https://jaswanth-learning-application.netlify.app/" class="work__img">
-                        <img src="assets/img/olp.png" alt="">
+                    <a href="https://jaswanth-learning-application.netlify.app/" class="work__img" target="_blank" rel="noopener">
+                        <img src="assets/img/olp.png" alt="Learning App">
+                        <span class="work__caption">Learning App</span>
                     </a>
                 </div>
             </section>
@@ -370,8 +458,11 @@ systems that align with business goals</p>
         <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">K Jaswanth</p>
+            <p class="footer__text">Open to backend and API engineering roles in Java, Spring Boot, and cloud-native systems.</p>
             <div class="footer__social">
-                <a href="https://www.instagram.com/jaswanth8262/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/k-jaswanth-227b94256/" class="footer__icon" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/547Jaswanth" class="footer__icon" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/jaswanth8262/" class="footer__icon" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i></a>
             </div>
         </footer>
 

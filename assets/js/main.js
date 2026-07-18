@@ -1,11 +1,15 @@
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+          nav = document.getElementById(navId)
 
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
+            const isOpen = nav.classList.toggle('show')
+            // set aria-expanded for accessibility
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
+            // toggle body class so header/background can change when menu is open
+            document.body.classList.toggle('menu-open', isOpen)
         })
     }
 }
@@ -88,3 +92,37 @@ sr.reveal('.experience__card', { interval: 200 });
 
 sr.reveal('.experience__card2', { interval: 10 });
 
+
+// ===== SKILLS GRID: automatic one/two column behavior =====
+function updateSkillsGridColumns() {
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (!skillsGrid) return;
+
+    // Count visible skill-category elements
+    const categories = Array.from(skillsGrid.querySelectorAll('.skill-category'))
+        .filter(el => el.offsetParent !== null); // only visible
+
+    if (categories.length <= 1) {
+        skillsGrid.classList.remove('two-col');
+        skillsGrid.classList.add('one-col');
+    } else {
+        skillsGrid.classList.remove('one-col');
+        skillsGrid.classList.add('two-col');
+    }
+}
+
+// Run on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    updateSkillsGridColumns();
+
+    // Observe future changes to the skills grid (cards added/removed)
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (skillsGrid && window.MutationObserver) {
+        const mo = new MutationObserver(() => updateSkillsGridColumns());
+        mo.observe(skillsGrid, { childList: true, subtree: false });
+    }
+
+    // Also update on window resize just in case
+    window.addEventListener('resize', () => updateSkillsGridColumns());
+
+});
