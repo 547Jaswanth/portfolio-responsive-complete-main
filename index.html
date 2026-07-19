@@ -59,9 +59,13 @@
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/k-jaswanth-227b94256/" class="home__social-icon social-linkedin" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://github.com/547Jaswanth" class="home__social-icon social-github" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:jaswanth.keeramanda@gmail.com" class="contact__email home__social-icon social-mail" aria-label="Email">
+                    <a href="mailto:jaswanth.keeramanda@gmail.com?subject=Hello%20Jaswanth" class="contact__email home__social-icon social-mail" aria-label="Email" target="_self">
                                             <i class='bx bx-mail-send' style="font-size: 20px;"></i>
                                         </a>
+                    <div class="email-popup" id="email-popup" role="tooltip">
+                        <span class="email-popup__address">jaswanth.keeramanda@gmail.com</span>
+                        <button class="email-popup__copy" id="copy-email-btn" type="button" aria-label="Copy email address">Copy</button>
+                    </div>
                                         <a href="tel:+919182791342" class="contact__phone home__social-icon social-phone" aria-label="Phone">
                                             <i class='bx bx-phone' style="font-size: 20px;"></i>
                                         </a>
@@ -114,7 +118,7 @@
 
             <img src="assets/img/spire.ai_logo.png"
                  alt="Spire.ai Logo"
-                 style="position: absolute; top: 10px; right: 10px; width:170px; height:60px; border-radius:8px;">
+                 class="experience__logo">
 
             <h3 class="experience__role">Software Engineer 1</h3>
             <p class="experience__company">Spire Technologies & Solutions Pvt. Ltd. (Spire.ai), Bengaluru</p>
@@ -166,7 +170,7 @@
 
             <img src="assets/img/fre.png"
                  alt="Logo"
-                 style="position: absolute; top: 10px; right: 10px; width:170px; height:120px; border-radius:8px;">
+                 class="experience__logo">
 
             <h3 class="experience__role">Freelance Backend Java Developer</h3>
             <p class="experience__company">Independent Contractor</p>
@@ -194,7 +198,7 @@
 
             <img src="assets/img/neosoft_logo.png"
                  alt="neosoft Logo"
-                 style="position: absolute; top: 10px; right: 10px; width:170px; height:60px; border-radius:8px;">
+                 class="experience__logo">
 
             <h3 class="experience__role">Associate Software Engineer</h3>
             <p class="experience__company">NeoSOFT Technologies Pvt. Ltd. (Client: Xpressbees), Bengaluru</p>

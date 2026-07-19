@@ -115,6 +115,103 @@ function updateSkillsGridColumns() {
 document.addEventListener('DOMContentLoaded', () => {
     updateSkillsGridColumns();
 
+    const emailLink = document.querySelector('.contact__email');
+    const emailPopup = document.getElementById('email-popup');
+    const copyEmailButton = document.getElementById('copy-email-btn');
+    const emailAddress = 'jaswanth.keeramanda@gmail.com';
+
+    if (emailLink && emailPopup && copyEmailButton) {
+        let isPinned = false;
+
+        const showEmailPopup = () => emailPopup.classList.add('show');
+        const hideEmailPopup = () => emailPopup.classList.remove('show');
+
+        const copyToClipboard = async () => {
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(emailAddress);
+                } else {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = emailAddress;
+                    tempInput.setAttribute('readonly', '');
+                    tempInput.style.position = 'fixed';
+                    tempInput.style.left = '-9999px';
+                    tempInput.style.top = '-9999px';
+                    document.body.appendChild(tempInput);
+                    tempInput.focus();
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                }
+                return true;
+            } catch (error) {
+                return false;
+            }
+        };
+
+        const handlePopupVisibility = (shouldShow) => {
+            if (isPinned) {
+                showEmailPopup();
+                return;
+            }
+            if (shouldShow) {
+                showEmailPopup();
+            } else {
+                hideEmailPopup();
+            }
+        };
+
+        emailLink.addEventListener('mouseenter', () => handlePopupVisibility(true));
+        emailLink.addEventListener('focus', () => handlePopupVisibility(true));
+        emailLink.addEventListener('mouseleave', (event) => {
+            const relatedTarget = event.relatedTarget;
+            if (relatedTarget && emailPopup.contains(relatedTarget)) {
+                return;
+            }
+            handlePopupVisibility(false);
+        });
+        emailLink.addEventListener('blur', (event) => {
+            const relatedTarget = event.relatedTarget;
+            if (relatedTarget && emailPopup.contains(relatedTarget)) {
+                return;
+            }
+            handlePopupVisibility(false);
+        });
+        emailPopup.addEventListener('mouseenter', () => handlePopupVisibility(true));
+        emailPopup.addEventListener('mouseleave', () => {
+            if (!isPinned) {
+                hideEmailPopup();
+            }
+        });
+
+        emailLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            isPinned = true;
+            showEmailPopup();
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!emailLink.contains(event.target) && !emailPopup.contains(event.target)) {
+                isPinned = false;
+                hideEmailPopup();
+            }
+        });
+
+        copyEmailButton.addEventListener('click', async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            isPinned = true;
+            showEmailPopup();
+
+            const copied = await copyToClipboard();
+            copyEmailButton.textContent = copied ? 'Copied!' : 'Try again';
+            setTimeout(() => {
+                copyEmailButton.textContent = 'Copy';
+            }, 1600);
+        });
+    }
+
     // Observe future changes to the skills grid (cards added/removed)
     const skillsGrid = document.querySelector('.skills-grid');
     if (skillsGrid && window.MutationObserver) {
