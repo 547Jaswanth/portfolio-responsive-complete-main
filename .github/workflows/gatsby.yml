@@ -25,9 +25,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p public
-          shopt -s dotglob
-          cp -r ./* public/
-          rm -rf public/.github public/.git
+          rsync -a --exclude public --exclude .github --exclude .git ./ public/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
