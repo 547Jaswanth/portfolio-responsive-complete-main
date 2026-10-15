@@ -223,3 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => updateSkillsGridColumns());
 
 });
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    const navToggle = document.getElementById('nav-toggle')
+    navMenu.classList.remove('show')
+    navToggle.setAttribute('aria-expanded', 'false')
+    document.body.classList.remove('menu-open')
+}
